@@ -17,3 +17,4 @@ spring.security.user.name=user
 spring.security.user.password=password
 
 springdoc.api-docs.enabled=false
+server.forward-headers-strategy=framework
