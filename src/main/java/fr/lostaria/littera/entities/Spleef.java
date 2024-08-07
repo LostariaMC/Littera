@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "shootcraft")
-public class ShootCraft extends TranslationsCategory {
-
+@Table(name = "spleef")
+public class Spleef extends TranslationsCategory {
 }

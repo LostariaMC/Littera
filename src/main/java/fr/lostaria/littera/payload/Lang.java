@@ -1,4 +1,4 @@
-package fr.lostaria.littera.lang;
+package fr.lostaria.littera.payload;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,8 +26,8 @@ public enum Lang {
         return id;
     }
 
-    public static String getName(String id) {
-        return languages.get(id);
+    public String getName() {
+        return name;
     }
 
     public static Map<String, String> getLanguages() {
