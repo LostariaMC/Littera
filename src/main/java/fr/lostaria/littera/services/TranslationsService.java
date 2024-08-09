@@ -2,6 +2,7 @@ package fr.lostaria.littera.services;
 
 import fr.lostaria.littera.entities.TranslationsCategory;
 import fr.lostaria.littera.payload.Category;
+import fr.lostaria.littera.repositories.MainRepository;
 import fr.lostaria.littera.repositories.ShootCraftRepository;
 import fr.lostaria.littera.repositories.SpleefRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ import java.util.stream.StreamSupport;
 public class TranslationsService {
 
     @Autowired
+    private MainRepository mainRepository;
+
+    @Autowired
     private ShootCraftRepository shootCraftRepository;
 
     @Autowired
@@ -22,6 +26,10 @@ public class TranslationsService {
 
     public List<TranslationsCategory> getTranslations(Category category) {
         switch (category) {
+            case MAIN:
+                return StreamSupport
+                        .stream(mainRepository.findAll().spliterator(), false)
+                        .collect(Collectors.toList());
             case SHOOTCRAFT:
                 return StreamSupport
                         .stream(shootCraftRepository.findAll().spliterator(), false)

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum Category {
+    MAIN("main", "Main"),
     SHOOTCRAFT("shootcraft", "ShootCraft"),
     SPLEEF("spleef", "Spleef");
 
