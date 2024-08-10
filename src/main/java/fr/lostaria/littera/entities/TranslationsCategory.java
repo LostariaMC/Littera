@@ -14,10 +14,10 @@ public class TranslationsCategory {
     @Column(nullable = false, unique = true)
     private String label;
 
-    @Column
+    @Column(columnDefinition = "LONGTEXT")
     private String fr;
 
-    @Column
+    @Column(columnDefinition = "LONGTEXT")
     private String en;
 
     public String getTranslation(Lang lang) {
